@@ -1,6 +1,7 @@
 // Code goes here
 // jshint esversion: 6
 
+var timer = 0;
 
 var mech_data = {
     "labels": ["2017-11-02", "2017-11-03", "2017-11-04", "2017-11-05", "2017-11-06", "2017-11-07", "2017-11-08", "2017-11-09", "2017-11-10", "2017-11-11", "2017-11-12", "2017-11-13", "2017-11-14", "2017-11-15", "2017-11-16", "2017-11-17", "2017-11-18", "2017-11-19", "2017-11-20", "2017-11-21", "2017-11-22", "2017-11-23", "2017-11-24", "2017-11-25", "2017-11-26", "2017-11-27", "2017-11-29", "2017-11-30", "2017-12-02", "2017-12-03", "2017-12-04", "2017-12-05", "2017-12-06", "2017-12-07", "2017-12-08", "2017-12-09", "2017-12-10", "2017-12-12", "2017-12-13", "2017-12-14", "2017-12-15", "2017-12-16", "2017-12-17", "2017-12-18", "2017-12-19", "2017-12-21", "2017-12-23", "2017-12-24", "2017-12-25", "2017-12-26", "2017-12-27", "2017-12-28", "2017-12-29", "2017-12-30", "2017-12-31", "2018-01-02", "2018-01-03", "2018-01-04"],
@@ -259,10 +260,17 @@ $('#explanationModal').on('show.bs.modal', function(event) {
     gtag('event', 'explanationModal-' + 'doc', {
   'send_to': 'UA-112273089-1'
 });
+    timer = performance.now();
 });
 
 $('#explanationModal').on('hide.bs.modal', function(e){
     gtag('event', 'explanationModal_close');
+      gtag('event', 'timing_complete', {
+    'name': 'explanationModal_read-' + $(this).find('.modal-title')[0].textContent.replace(/\ /g, "-"),
+    'value': Math.round(performance.now() - timer),
+    'event_category': 'reading_time'
+  });
+timer = 0;
 });
 
 discorddate = '2017-11-03';
@@ -354,6 +362,7 @@ $(window).resize(function() {
             startDate: "2017-11-03",
             endDate: "2017-12-31"
         }).datepicker('update', discorddate).on('changeDate', function(e) {
+               
             var modal = $('#discordlogModal');
             dd = e.format('yyyy-mm-dd');
             document.cookie = "discorddate=" + dd + ";";
@@ -364,6 +373,7 @@ $(window).resize(function() {
                 $(this).unbind('hidden.bs.modal');
 
             });
+            gtag('event', 'discordlogModal_datepick-' + dd);
         });
         $('#discordlogModal .prevday').on('click', function(e) {
 
@@ -372,6 +382,7 @@ $(window).resize(function() {
             mome.subtract(1, 'days');
             discorddate = mome.format('YYYY-MM-DD');
             $('#discordlogModal .modal-datepicker').datepicker('setUTCDate', mome.toDate());
+            gtag('event', 'discordlogModal_prevday');
         });
 
         $('#discordlogModal .nextday').on('click', function(e) {
@@ -381,13 +392,20 @@ $(window).resize(function() {
             mome.add(1, 'days');
             discorddate = mome.format('YYYY-MM-DD');
             $('#discordlogModal .modal-datepicker').datepicker('setUTCDate', mome.toDate());
+            gtag('event', 'discordlogModal_nextday');
         });
 
 $('#discordlogModal').on('hide.bs.modal', function(e){
     gtag('event', 'discordlogModal_close');
+          gtag('event', 'timing_complete', {
+    'name': 'discordlogModal_read',
+    'value': Math.round(performance.now() - timer),
+    'event_category': 'reading_time'
+  });
+timer = 0;
 });
 $('#discordlogModal').on('show.bs.modal', function(event) {
-
+timer = performance.now()
 gtag('event', 'discordlogModal');
     currentutcdate = $('#discordlogModal .modal-datepicker').datepicker('getUTCDate');
 
@@ -503,6 +521,7 @@ gtag('event', 'discordlogModal');
                 $(this).unbind('hidden.bs.modal');
 
             });
+            gtag('event', 'ytlogModal_datepick-' + dd);
         });
         $('#ytlogModal .prevday').on('click', function(e) {
 
@@ -514,6 +533,7 @@ gtag('event', 'discordlogModal');
             } while (ytdisableddates.includes(mome.format('YYYY-MM-DD')))
             ytdate = mome.format('YYYY-MM-DD');
             $('#ytlogModal .modal-datepicker').datepicker('setUTCDate', mome.toDate());
+            gtag('event', 'ytlogModal_prevday');
         });
 
         $('#ytlogModal .nextday').on('click', function(e) {
@@ -526,12 +546,20 @@ gtag('event', 'discordlogModal');
             } while (ytdisableddates.includes(mome.format('YYYY-MM-DD')))
             ytdate = mome.format('YYYY-MM-DD');
             $('#ytlogModal .modal-datepicker').datepicker('setUTCDate', mome.toDate());
+            gtag('event', 'ytlogModal_nextday');
         });
 
 $('#ytlogModal').on('hide.bs.modal', function(e){
-    gtag('event', 'ytlogModal_close');});
+    gtag('event', 'ytlogModal_close');
+  gtag('event', 'timing_complete', {
+    'name': 'ytlogModal_read',
+    'value': Math.round(performance.now() - timer),
+    'event_category': 'reading_time'
+  });
+timer = 0;
+});
 $('#ytlogModal').on('show.bs.modal', function(event) {
-
+timer = performance.now()
 gtag('event', 'ytlogModal');
     currentutcdate = $('#ytlogModal .modal-datepicker').datepicker('getUTCDate');
 
