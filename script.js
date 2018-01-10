@@ -29,14 +29,15 @@ var all_data = {
 function pad_data(object) {
     var m = moment.utc("2017-11-02");
     var e = moment.utc("2017-12-31");
+    var i = 0;
 
     var labels = [];
     while (m.diff(e, 'days') < 0) {
         labels.push(m.format("YYYY-MM-DD"));
         m.add(1, 'days');
     }
-    for (var i = 0; i < labels.length; i++) {
-        if (object.labels[i] != labels[i]) {
+    for (i = 0; i < labels.length; i++) {
+        if (object.labels[i] !== labels[i]) {
             object.labels.splice(i, 0, labels[i]);
             object.series.splice(i, 0, 0);
         }
@@ -134,7 +135,6 @@ chart.on('draw', (ctx) => {
     m = window.matchMedia("(min-width: 1281px)").matches;
     if (m) {
         if (ctx.type === 'label' && ctx.text.toString().match(/\d\d-\d\d/)) {
-            // n(ctx)
             // adjust label position for rotation
             const dX = ctx.width + (104 - ctx.width);
             ctx.element.attr({
@@ -404,14 +404,12 @@ $('#discordlogModal').on('show.bs.modal', function(event) {
     if (currentutcdate.getTime() == startdate.getTime()) {
         $('#discordlogModal .prevday').prop('disabled', true);
     } else {
-
         $('#discordlogModal .prevday').prop('disabled', false);
     }
 
     if (currentutcdate.getTime() == enddate.getTime()) {
         $('#discordlogModal .nextday').prop('disabled', true);
     } else {
-
         $('#discordlogModal .nextday').prop('disabled', false);
     }
 
@@ -424,6 +422,7 @@ $('#discordlogModal').on('show.bs.modal', function(event) {
     modal.find('.modal-title').html('Discord</br>' + d);
     tbl = document.querySelector('#discordlogModal .logtable tbody');
     tbl.innerHTML = "";
+    tbl.style = "display: none";
     $.ajax('/log/' + 'discord' + '/' + d + '.json', {
         dataType: 'text',
         type: 'GET'
@@ -438,10 +437,8 @@ $('#discordlogModal').on('show.bs.modal', function(event) {
                 if (j == 2) {
                     td.textContent = chatlog[i][j];
                 } else if (j == 1) {
-
                     td.textContent = chatlog[i][0] + '\n' + chatlog[i][j];
                 } else {
-
                     td.textContent = chatlog[i][j];
                 }
                 t.appendChild(td);
@@ -449,7 +446,6 @@ $('#discordlogModal').on('show.bs.modal', function(event) {
 
             if (chatlog[i].length > 5) {
                 t.setAttribute("id", "highlight-" + chatlog[i][5]);
-
                 modal.find('.dropdown-menu').append("<a class=\"dropdown-item\" href=\"#highlight-" + chatlog[i][5] + "\">" + chatlog[i][5] + "</a>");
             }
             if (chatlog[i].length > 4) {
@@ -469,12 +465,13 @@ $('#discordlogModal').on('show.bs.modal', function(event) {
                 tbl.appendChild(tr2);
                 tr2 = undefined;
             }
+            modal.find('.loading').hide();
+            tbl.removeAttribute('style');
         }
         $('.logtable td').linkify();
     }).fail(function(xhr, status, e) {
-
+        modal.find('.fa-spinner').removeClass('fa-spinner').addClass('fa-exclamation-triangle');
     });
-    // modal.find('.modal-body')[0].scrollTop = 0;
 });
 
 
@@ -503,7 +500,6 @@ $('#ytlogModal .prevday').on('click', function(e) {
     dd = $('#ytlogModal .modal-datepicker').datepicker('getUTCDate');
     mome = moment.utc(dd);
     do {
-
         mome.subtract(1, 'days');
     } while (ytdisableddates.includes(mome.format('YYYY-MM-DD')));
     ytdate = mome.format('YYYY-MM-DD');
@@ -516,7 +512,6 @@ $('#ytlogModal .nextday').on('click', function(e) {
     dd = $('#ytlogModal .modal-datepicker').datepicker('getUTCDate');
     mome = moment.utc(dd);
     do {
-
         mome.add(1, 'days');
     } while (ytdisableddates.includes(mome.format('YYYY-MM-DD')));
     ytdate = mome.format('YYYY-MM-DD');
@@ -537,22 +532,21 @@ $('#ytlogModal').on('hide.bs.modal', function(e) {
 $('#ytlogModal').on('show.bs.modal', function(event) {
     timer = performance.now();
     gtag('event', 'ytlogModal');
+
+
     currentutcdate = $('#ytlogModal .modal-datepicker').datepicker('getUTCDate');
-
     startdate = $('#ytlogModal .modal-datepicker').datepicker('getStartDate');
-
     enddate = $('#ytlogModal .modal-datepicker').datepicker('getEndDate');
+
     if (currentutcdate.getTime() == startdate.getTime()) {
         $('#ytlogModal .prevday').prop('disabled', true);
     } else {
-
         $('#ytlogModal .prevday').prop('disabled', false);
     }
 
     if (currentutcdate.getTime() == enddate.getTime()) {
         $('#ytlogModal .nextday').prop('disabled', true);
     } else {
-
         $('#ytlogModal .nextday').prop('disabled', false);
     }
 
@@ -561,10 +555,12 @@ $('#ytlogModal').on('show.bs.modal', function(event) {
     d = ytdate;
 
     var modal = $(this);
+
     modal.find('.dropdown-menu').empty();
     modal.find('.modal-title').html('YouTube</br>' + d);
     tbl = document.querySelector('#ytlogModal .logtable tbody');
     tbl.innerHTML = "";
+    tbl.style = "display: none";
 
     $.ajax('/log/' + 'yt' + '/' + d + '.json', {
         dataType: 'text'
@@ -587,7 +583,6 @@ $('#ytlogModal').on('show.bs.modal', function(event) {
 
             if (chatlog[i].length > 4) {
                 t.setAttribute("id", "highlight-" + chatlog[i][4]);
-
                 modal.find('.dropdown-menu').append("<a class=\"dropdown-item\" href=\"#highlight-" + chatlog[i][4] + "\">" + chatlog[i][4] + "</a>");
             }
             if (chatlog[i].length > 3) {
@@ -607,11 +602,11 @@ $('#ytlogModal').on('show.bs.modal', function(event) {
                 tbl.appendChild(tr2);
                 tr2 = undefined;
             }
+            modal.find('.loading').hide();
+            // tbl.style = "display: inline";
+            tbl.removeAttribute('style');
         }
     }).fail(function(xhr, status, e) {
+        modal.find('.fa-spinner').removeClass('fa-spinner').addClass('fa-exclamation-triangle');
     });
 });
-
-// $('#ytlogModal').on('shown.bs.modal', function(event) {
-//     $(this).find('.modal-body')[0].scrollTop = 0;
-// });

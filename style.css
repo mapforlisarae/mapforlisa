@@ -255,6 +255,25 @@
   overflow-y: auto;
 }
 
+.modal-body .fa-spinner{
+  top: 30%;
+  position: relative;
+}
+
+.modal-body .loading{
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  height: 100%;
+  font-size: 5vw;
+}
+
+@media(max-width: 992px){
+  .modal-body .loading{
+    font-size: 7vw;
+  }
+}
+
 @media (max-width: 992px) {
 
   .logtable tr td code:only-child {
