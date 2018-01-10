@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/tmmdata/chartist&#45;plugin&#45;tooltip/130146dd/dist/chartist&#45;plugin&#45;tooltip.css"> -->
+    <!-- <link rel="stylesheet" href="chartist&#45;plugin&#45;tooltip.css"> -->
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="theme.css" />
+</head>
+
+<body>
+    <div class="ct-chart ct-minor-seventh" id="msg-over-time-graph">
+        <!-- <div id='overlay'></div> -->
+    </div>
+    <div id="in-between">
+        <div class="container">
+            <div class="row justify-content-center">
+                <p>This is a graph of messages per day. The colored lines are us, the grey one is the total.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 text-center">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#discordlogModal" data-logtype='discord' data-defaultdate='2017-11-03'>Commented Discord Chat Log</button>
+                </div>
+                <div class="col-6 text-center">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ytlogModal" data-logtype='yt' data-defaultdate='2017-09-25'>Commented YouTube Chat Log</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h3>Emotional state over time</h3>
+        </div>
+        <div class="row justify-content-center" style="margin: 0">
+            Top bar is apparent state, bottom bar is actual state
+        </div>
+    </div>
+    <div id="lisa-state" class="state">
+        <div class="ct-chart ct-minor-seventh state-bar" id="overstate-lisa"></div>
+        <div id="lisa_r-avatar" class="avatar"><img src="img/lisa_r.png"></div>
+        <div class="ct-chart ct-minor-seventh state-bar" id="understate-lisa"></div>
+    </div>
+    <div id="mechalynx-state" class="state">
+        <div class="ct-chart ct-minor-seventh state-bar" id="overstate-mechalynx"></div>
+        <div id="mechalynx-avatar" class="avatar"><img src="img/mechalynx.png"></div>
+        <div class="ct-chart ct-minor-seventh state-bar" id="understate-mechalynx"></div>
+    </div>
+    <div id="antoine-state" class="state">
+        <div class="ct-chart ct-minor-seventh state-bar" id="overstate-antoine"></div>
+        <div id="antoine-avatar" class="avatar"><img src="img/antoine.png"></div>
+        <div class="ct-chart ct-minor-seventh state-bar" id="understate-antoine"></div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8 text-center">
+                <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#explanationModal" data-explanation="summary" data-title="Summary">Summary</button>
+            </div>
+        </div>
+    </div>
+    <div id="explanations" class="container">
+        <div class="row justify-content-around align-items-center">
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanationModal" data-explanation="didnt-understand-overwhelmed" data-title="Why I never understood I was overwhelming you">Why I never understood I was overwhelming you</button>
+            </div>
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanationModal" data-explanation="banned-antoine" data-title="Why I banned Antoine">Why I banned Antoine</button>
+
+            </div>
+        </div>
+        <div class="row justify-content-around align-items-center">
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanationModal" data-explanation="trust" data-title="Why I couldn't trust you">Why I couldn't trust you</button>
+            </div>
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanationModal" data-explanation="treated-way" data-title="Why I treated him the way I did">Why I treated him the way I did</button>
+            </div>
+        </div>
+        <div class="row justify-content-around align-items-center">
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanationModal" data-explanation="why-i-care" data-title="Why I care">Why I care</button>
+            </div>
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanationModal" data-explanation="what-happened" data-title="What I think happened">What I think happened</button>
+            </div>
+        </div>
+        <div class="row justify-content-around align-items-center">
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanationModal" data-explanation="im-like" data-title="What I'm like">What I'm like</button>
+            </div>
+            <div class="col-6 text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanationModal" data-explanation="what-he-told-me" data-title="What he told me after I banned him">What he told me after I banned him</button>
+            </div>
+            <div class="col-6 text-center">
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation Modal -->
+    <div class="modal fade" id="explanationModal" tabindex="-1" role="dialog" aria-labelledby="explanationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="explanationModalLabel">Why</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Log Modal -->
+    <div class="modal fade" id="discordlogModal" tabindex="-1" role="dialog" aria-labelledby="discordlogModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title text-left small" id="logModalLabel"></h6>
+<div class="dropdown">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Highlights
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+                    <button type="button" data-provide="datepicker" class="btn btn-primary modal-datepicker btn-sm">Go to day</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <table class='logtable' >
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm prevday" >Previous Day</button>
+                    <button type="button" class="btn btn-secondary btn-sm nextday" >Next Day</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ytlogModal" tabindex="-1" role="dialog" aria-labelledby="ytlogModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title text-left small" id="logModalLabel"></h6>
+<div class="dropdown">
+  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Highlights
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+                    <button type="button" data-provide="datepicker" class="btn btn-primary modal-datepicker btn-sm">Go to day</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <table class='logtable' >
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm prevday" >Previous Day</button>
+                    <button type="button" class="btn btn-secondary btn-sm nextday" >Next Day</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="linkify.min.js"></script>
+    <script src="linkify-jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/gionkunz/chartist&#45;plugin&#45;pointlabels/9335df50/dist/chartist&#45;plugin&#45;pointlabels.min.js"></script> -->
+    <script src="https://cdn.rawgit.com/alexstanbury/chartist-plugin-axistitle/46e57017/dist/chartist-plugin-axistitle.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/tmmdata/chartist&#45;plugin&#45;tooltip/130146dd/dist/chartist&#45;plugin&#45;tooltip.min.js"></script> -->
+    <!-- <script src="chartist&#45;plugin&#45;tooltip.js"></script> -->
+    <script src="bootstrap-datepicker.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

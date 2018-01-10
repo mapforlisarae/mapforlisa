@@ -1,0 +1,361 @@
+/* Styles go here */
+
+.ct-series-b .ct-line {
+  stroke: #2a2f51;
+  stroke-width: 3px;
+}
+
+.ct-series-c .ct-line {
+  stroke: #b8181b;
+  stroke-width: 3px;
+}
+
+.ct-series-d .ct-line {
+  stroke: #3b6c23;
+  stroke-width: 3px;
+}
+
+.ct-series-a .ct-line {
+  stroke: #33330033;
+}
+
+.ct-series-a .ct-bar {
+  stroke: green;
+}
+
+#overstate-lisa .ct-series-a .ct-bar {
+  stroke: green;
+}
+
+#overstate-lisa .ct-series-b .ct-bar {
+  stroke: blue;
+}
+
+#overstate-lisa .ct-series-c .ct-bar {
+  stroke: green;
+}
+
+#overstate-lisa .ct-series-d .ct-bar {
+  stroke: orange;
+}
+
+
+#understate-lisa .ct-series-a .ct-bar {
+  stroke: green;
+}
+
+#understate-lisa .ct-series-b .ct-bar {
+  stroke: yellow;
+}
+
+#understate-lisa .ct-series-c .ct-bar {
+  stroke: orange;
+}
+
+#understate-lisa .ct-series-d .ct-bar {
+  stroke: yellow;
+}
+
+#understate-lisa .ct-series-e .ct-bar {
+  stroke: yellow;
+}
+
+#understate-lisa .ct-series-f .ct-bar {
+  stroke: red;
+}
+
+#overstate-mechalynx .ct-series-a .ct-bar {
+  stroke: green;
+}
+
+#overstate-mechalynx .ct-series-b .ct-bar {
+  stroke: blue;
+}
+
+#overstate-mechalynx .ct-series-c .ct-bar {
+  stroke: orange;
+}
+
+#overstate-mechalynx .ct-series-d .ct-bar {
+  stroke: yellow;
+}
+
+#understate-mechalynx .ct-series-a .ct-bar {
+  stroke: green;
+}
+
+#understate-mechalynx .ct-series-b .ct-bar {
+  stroke: #33dd99;
+}
+
+#understate-mechalynx .ct-series-c .ct-bar {
+  stroke: #33aaaa;
+}
+
+#understate-mechalynx .ct-series-d .ct-bar {
+  stroke: black;
+}
+
+#understate-mechalynx .ct-series-e .ct-bar {
+  stroke: orange;
+}
+
+#understate-mechalynx .ct-series-f .ct-bar {
+  stroke: #995577;
+}
+
+#overstate-antoine .ct-series-a .ct-bar {
+  stroke: green;
+}
+
+#overstate-antoine .ct-series-b .ct-bar {
+  stroke: grey;
+}
+
+#overstate-antoine .ct-series-c .ct-bar {
+  stroke: yellow;
+}
+
+#overstate-antoine .ct-series-d .ct-bar {
+  stroke: orange;
+}
+
+#overstate-antoine .ct-series-e .ct-bar {
+  stroke: yellow;
+}
+
+#overstate-antoine .ct-series-f .ct-bar {
+  stroke: red;
+}
+
+#overstate-antoine .ct-series-g .ct-bar{
+  stroke: crimson;
+}
+
+#understate-antoine .ct-series-a .ct-bar {
+  stroke: green;
+}
+
+#understate-antoine .ct-series-b .ct-bar {
+  stroke: yellow;
+}
+
+#understate-antoine .ct-series-c .ct-bar {
+  stroke: green;
+}
+
+#understate-antoine .ct-series-d .ct-bar {
+  stroke: orange;
+}
+
+#understate-antoine .ct-series-e .ct-bar {
+  stroke: brown;
+}
+
+#understate-antoine .ct-series-f .ct-bar {
+  stroke: red;
+}
+
+#understate-antoine .ct-series-g .ct-bar{
+  stroke: crimson;
+}
+
+@media (min-width: 1281px) {
+  .ct-chart-line .ct-label.ct-horizontal.ct-end {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transform: rotate(-75deg);
+    transform-origin: 100% 0;
+    text-align: right;
+    max-height: 1.5em;
+    min-width: 100px;
+    max-width: 100px;
+  }
+}
+
+
+/* #emotional-state-over-time-graph{ */
+
+
+/*   overflow: hidden; */
+
+
+/* } */
+
+.state-bar {
+  height: 24px;
+  display: block;
+}
+
+
+/* .avatar-container{ */
+
+
+/*   float: left; */
+
+
+/*   height: 100%; */
+
+
+/*   display: block; */
+
+
+/*   position: absolute; */
+
+
+/* } */
+
+
+/*  */
+
+
+/* .avatar-subcontainer{ */
+
+
+/*   position: relative; */
+
+
+/* } */
+
+.avatar {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  overflow: hidden;
+  clear: both;
+  position: absolute;
+  float: left;
+  top: 100%;
+  margin-left: 8px;
+}
+
+
+.logtable td:nth-child(3),
+.logtable td:nth-child(4) {
+  word-wrap: break-word;
+}
+
+.logtable td:nth-child(2) {
+  /* width: 1px; */
+  width: 9em;
+  white-space: nowrap;
+}
+
+#discordlogModal .logtable td:nth-child(2) {
+  width: 7em;
+}
+
+@media (max-width: 992px) {
+
+  .logtable tr td code:only-child {
+    width: 90vw;
+    display: block;
+    font-size: 12px;
+  }
+}
+
+.logtable tr {
+  white-space: break-word;
+}
+
+.logtable {
+  table-layout: fixed;
+}
+
+#overlay {
+  background-color: rgba(33, 33, 33, 0.5);
+  width: 20vw;
+  height: 94%;
+  display: block;
+  position: absolute;
+  bottom: 4.2%;
+  z-index: 1;
+}
+
+.ct-chart {
+  position: relative;
+}
+
+#overlay:hover {
+  background-color: rgba(55, 55, 55, 0.3);
+  cursor: pointer;
+}
+
+.spacer {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  width: 100%;
+  display: block;
+}
+
+.state {
+  position: relative;
+  margin-bottom: 16px;
+  z-index: -1;
+}
+
+.avatar img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#lisa_r-avatar {
+  border-color: #b8181b;
+}
+
+#antoine-avatar {
+  border-color: #3b6c23;
+}
+
+#mechalynx-avatar {
+  border-color: #2a2f51;
+}
+
+#in-between {
+  margin: 8px;
+}
+
+.btn {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  word-break: normal !important;
+}
+
+.row {
+  margin-top: 16px;
+}
+
+.logtable {
+  font-size: smaller;
+  width: 100%;
+}
+
+.modal-body {
+  padding: 8px;
+}
+
+.logtable tbody tr {
+  border-bottom: 1px solid #999;
+}
+
+.logtable tbody tr td:first-child {
+  font-size: x-small;
+  /* white-space: nowrap; */
+  padding-right: 4px;
+  width: 48px;
+}
+
+.logtable tbody tr h1,
+#logtable tbody tr h2,
+#logtable tbody tr h3,
+#logtable tbody tr h4,
+#logtable tbody tr h5,
+#logtable tbody tr h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
