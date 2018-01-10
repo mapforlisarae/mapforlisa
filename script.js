@@ -388,7 +388,7 @@ $(window).resize(function() {
 
 $('#discordlogModal').on('show.bs.modal', function(event) {
 
-
+gtag('event', 'discordlogModal');
     currentutcdate = $('#discordlogModal .modal-datepicker').datepicker('getUTCDate');
     console.log(currentutcdate);
     startdate = $('#discordlogModal .modal-datepicker').datepicker('getStartDate');
@@ -533,7 +533,7 @@ $('#discordlogModal').on('show.bs.modal', function(event) {
 
 $('#ytlogModal').on('show.bs.modal', function(event) {
 
-
+gtag('event', 'ytlogModal');
     currentutcdate = $('#ytlogModal .modal-datepicker').datepicker('getUTCDate');
     console.log(currentutcdate);
     startdate = $('#ytlogModal .modal-datepicker').datepicker('getStartDate');
