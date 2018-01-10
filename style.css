@@ -16,7 +16,7 @@
 }
 
 .ct-series-a .ct-line {
-  stroke: #33330033;
+  stroke: rgba(51,51,51,0.3);
 }
 
 .ct-series-a .ct-bar {
