@@ -134,7 +134,7 @@ chart.on('draw', (ctx) => {
     m = window.matchMedia("(min-width: 1281px)").matches;
     if (m) {
         if (ctx.type === 'label' && ctx.text.toString().match(/\d\d-\d\d/)) {
-            // console.log(ctx)
+            // n(ctx)
             // adjust label position for rotation
             const dX = ctx.width + (104 - ctx.width);
             ctx.element.attr({
@@ -246,20 +246,15 @@ $('#explanationModal').on('show.bs.modal', function(event) {
     var modal = $(this);
     // modal.find('.modal-title').text('New message to ' + recipient)
     // modal.find('.modal-body input').val(recipient)
-    console.log(doc);
     $.ajax('/explanation/' + doc + '.md', {
         dataType: 'text'
     }).done(function(text) {
-        console.log(text);
+
         var converter = new showdown.Converter();
         html = converter.makeHtml(text);
         modal.find('.modal-title')[0].textContent = tit;
         modal.find('.modal-body')[0].innerHTML = html;
     }).fail(function(xhr, status, e) {
-        console.log('failed');
-        console.log(status);
-        console.log(e);
-        console.log(xhr);
     });
     gtag('event', 'explanationModal-' + 'doc', {
   'send_to': 'UA-112273089-1'
@@ -395,9 +390,9 @@ $('#discordlogModal').on('show.bs.modal', function(event) {
 
 gtag('event', 'discordlogModal');
     currentutcdate = $('#discordlogModal .modal-datepicker').datepicker('getUTCDate');
-    console.log(currentutcdate);
+
     startdate = $('#discordlogModal .modal-datepicker').datepicker('getStartDate');
-    console.log(startdate);
+
     enddate = $('#discordlogModal .modal-datepicker').datepicker('getEndDate');
     if (currentutcdate.getTime() == startdate.getTime()) {
         $('#discordlogModal .prevday').prop('disabled', true);
@@ -425,11 +420,11 @@ gtag('event', 'discordlogModal');
     tbl = document.querySelector('#discordlogModal .logtable tbody');
     tbl.innerHTML = "";
     $.ajax('/log/' + 'discord' + '/' + d + '.json', {
-        type: 'GET'
+        dataType: 'text', type: 'GET'
     }).done(function(text) {
-        console.log(text);
+
         chatlog = JSON.parse(text);
-        console.log(chatlog);
+ 
         // FIGURE OUT JSON
         // var converter = new showdown.Converter();
         // converter.setOption('noHeaderId', true);
@@ -459,7 +454,7 @@ gtag('event', 'discordlogModal');
 
             if (chatlog[i].length > 5) {
                 t.setAttribute("id", "highlight-" + chatlog[i][5]);
-                console.log('have anchor!');
+ 
                 modal.find('.dropdown-menu').append("<a class=\"dropdown-item\" href=\"#highlight-" + chatlog[i][5] + "\">" + chatlog[i][5] + "</a>");
             }
             if (chatlog[i].length > 4) {
@@ -485,10 +480,7 @@ gtag('event', 'discordlogModal');
         }
         $('.logtable td').linkify();
     }).fail(function(xhr, status, e) {
-        console.log('failed');
-        console.log(status);
-        console.log(e);
-        console.log(xhr);
+
     });
 });
 
@@ -542,9 +534,9 @@ $('#ytlogModal').on('show.bs.modal', function(event) {
 
 gtag('event', 'ytlogModal');
     currentutcdate = $('#ytlogModal .modal-datepicker').datepicker('getUTCDate');
-    console.log(currentutcdate);
+
     startdate = $('#ytlogModal .modal-datepicker').datepicker('getStartDate');
-    console.log(startdate);
+
     enddate = $('#ytlogModal .modal-datepicker').datepicker('getEndDate');
     if (currentutcdate.getTime() == startdate.getTime()) {
         $('#ytlogModal .prevday').prop('disabled', true);
@@ -571,13 +563,13 @@ gtag('event', 'ytlogModal');
         modal.find('.modal-title').html('YouTube</br>' + d);
     tbl = document.querySelector('#ytlogModal .logtable tbody');
     tbl.innerHTML = "";
-    console.log( '/log/' + 'yt' + '/' + d + '.json' );
+
     $.ajax('/log/' + 'yt' + '/' + d + '.json', {
         dataType: 'text'
     }).done(function(text) {
-        console.log(text);
+
         chatlog = JSON.parse(text);
-        console.log(chatlog);
+
         // FIGURE OUT JSON
         // var converter = new showdown.Converter();
         // converter.setOption('noHeaderId', true);
@@ -604,7 +596,7 @@ gtag('event', 'ytlogModal');
 
             if (chatlog[i].length > 4) {
                 t.setAttribute("id", "highlight-" + chatlog[i][4]);
-                console.log('have anchor!');
+
                 modal.find('.dropdown-menu').append("<a class=\"dropdown-item\" href=\"#highlight-" + chatlog[i][4] + "\">" + chatlog[i][4] + "</a>");
             }
             if (chatlog[i].length > 3) {
@@ -628,9 +620,6 @@ gtag('event', 'ytlogModal');
             }
         }
     }).fail(function(xhr, status, e) {
-        console.log('failed');
-        console.log(status);
-        console.log(e);
-        console.log(xhr);
+
     });
 });
