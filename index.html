@@ -3,14 +3,17 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112273089-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112273089-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-112273089-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112273089-1');
+    </script>
 
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
@@ -18,12 +21,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/tmmdata/chartist&#45;plugin&#45;tooltip/130146dd/dist/chartist&#45;plugin&#45;tooltip.css"> -->
-    <!-- <link rel="stylesheet" href="chartist&#45;plugin&#45;tooltip.css"> -->
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
-<link rel="stylesheet" href="bootstrap.min.css">
-<link rel="stylesheet" href="bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="theme.css" />
 </head>
@@ -145,29 +146,26 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h6 class="modal-title text-left small" id="logModalLabel"></h6>
-<div class="dropdown">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Highlights
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        </div>
+                    </div>
                     <button type="button" data-provide="datepicker" class="btn btn-primary modal-datepicker btn-sm">Go to day</button>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
                 </div>
                 <div class="modal-body">
-                    <table class='logtable' >
+                    <table class='logtable'>
                         <tbody></tbody>
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-sm prevday" >Previous Day</button>
-                    <button type="button" class="btn btn-secondary btn-sm nextday" >Next Day</button>
+                    <button type="button" class="btn btn-secondary btn-sm prevday">Previous Day</button>
+                    <button type="button" class="btn btn-secondary btn-sm nextday">Next Day</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -179,46 +177,40 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h6 class="modal-title text-left small" id="logModalLabel"></h6>
-<div class="dropdown">
-  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Highlights
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        </div>
+                    </div>
                     <button type="button" data-provide="datepicker" class="btn btn-primary modal-datepicker btn-sm">Go to day</button>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
                 </div>
                 <div class="modal-body">
-                    <table class='logtable' >
+                    <table class='logtable'>
                         <tbody></tbody>
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-sm prevday" >Previous Day</button>
-                    <button type="button" class="btn btn-secondary btn-sm nextday" >Next Day</button>
+                    <button type="button" class="btn btn-secondary btn-sm prevday">Previous Day</button>
+                    <button type="button" class="btn btn-secondary btn-sm nextday">Next Day</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <script src="linkify.min.js"></script>
     <script src="linkify-jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-    <!-- <script src="https://cdn.rawgit.com/gionkunz/chartist&#45;plugin&#45;pointlabels/9335df50/dist/chartist&#45;plugin&#45;pointlabels.min.js"></script> -->
     <script src="https://cdn.rawgit.com/alexstanbury/chartist-plugin-axistitle/46e57017/dist/chartist-plugin-axistitle.min.js"></script>
-    <!-- <script src="https://cdn.rawgit.com/tmmdata/chartist&#45;plugin&#45;tooltip/130146dd/dist/chartist&#45;plugin&#45;tooltip.min.js"></script> -->
-    <!-- <script src="chartist&#45;plugin&#45;tooltip.js"></script> -->
     <script src="bootstrap-datepicker.js"></script>
     <script src="script.js"></script>
 </body>
