@@ -1,0 +1,26 @@
+# ignore vim files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# ignore tag files
+tags
+.tags
+
+# ignore todo files
+[tT][oO][dD][oO]*
+
+# ignore bugs files
+[bB][uU][gG][sS]*
+
+# ignore rubocop
+.rubocop.yml
+
+# ignore node_modules
+/node_modules
+
+# ignore sublime-text files
+*.sublime-*

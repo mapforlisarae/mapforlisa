@@ -250,6 +250,11 @@
   width: 7em;
 }
 
+#discordlogModal .modal-body, #ytlogModal .modal-body, #explanationModal .modal-body{
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
 @media (max-width: 992px) {
 
   .logtable tr td code:only-child {
