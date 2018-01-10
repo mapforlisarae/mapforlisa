@@ -261,6 +261,9 @@ $('#explanationModal').on('show.bs.modal', function(event) {
         console.log(e);
         console.log(xhr);
     });
+    gtag('event', 'explanationModal-' + 'doc', {
+  'send_to': 'UA-112273089-1'
+});
 });
 
 discorddate = '2017-11-03';
