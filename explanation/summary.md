@@ -6,7 +6,7 @@ _Take your time._
 
 This site has answers to questions in a format that I hope is easier for you to handle. It also has the full chat log from Discord (no PMs) commented with explanations of what, in retrospect, was actually happening and with how I interpreted things at the time.
 
-There's also the chat logs from Steve's streams, for as long as I was around. The earliest is from September 25th. Those are similarly commented.
+There's also the chat logs from Steve's streams, for as long as I was around. The earliest is from September 25th. Those are similarly commented and highlighted but not much.
 
 You can directly skip to the days you're interested in and there's highlight bookmarks so you don't have to read the entire thing.
 
