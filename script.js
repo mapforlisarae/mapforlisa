@@ -266,6 +266,10 @@ $('#explanationModal').on('show.bs.modal', function(event) {
 });
 });
 
+$('#explanationModal').on('hide.bs.modal', function(e){
+    gtag('event', 'explanationModal_close');
+});
+
 discorddate = '2017-11-03';
 ytdate = '2017-09-25';
 
@@ -384,8 +388,9 @@ $(window).resize(function() {
             $('#discordlogModal .modal-datepicker').datepicker('setUTCDate', mome.toDate());
         });
 
-
-
+$('#discordlogModal').on('hide.bs.modal', function(e){
+    gtag('event', 'discordlogModal_close');
+});
 $('#discordlogModal').on('show.bs.modal', function(event) {
 
 gtag('event', 'discordlogModal');
@@ -531,6 +536,8 @@ gtag('event', 'discordlogModal');
             $('#ytlogModal .modal-datepicker').datepicker('setUTCDate', mome.toDate());
         });
 
+$('#ytlogModal').on('hide.bs.modal', function(e){
+    gtag('event', 'ytlogModal_close');});
 $('#ytlogModal').on('show.bs.modal', function(event) {
 
 gtag('event', 'ytlogModal');
