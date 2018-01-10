@@ -425,7 +425,7 @@ gtag('event', 'discordlogModal');
     tbl = document.querySelector('#discordlogModal .logtable tbody');
     tbl.innerHTML = "";
     $.ajax('/log/' + 'discord' + '/' + d + '.json', {
-        dataType: 'text', type: 'GET'
+        type: 'GET'
     }).done(function(text) {
         console.log(text);
         chatlog = JSON.parse(text);
