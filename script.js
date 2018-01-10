@@ -166,73 +166,74 @@ var emfunc = function(data) {
     }
 };
 
+factor=2;
 chart2 = new Chartist.Bar('#overstate-lisa', {
     labels: ['lisa-1'],
     series: [
-        [40],
-        [7],
-        [12],
-        [3]
+        [40*factor],
+        [7*factor],
+        [12*factor],
+        [3*factor]
     ]
 }, emotion_opts).on('draw', emfunc);
 
 chart3 = new Chartist.Bar('#understate-lisa', {
     labels: ['lisa-2'],
     series: [
-        [11],
-        [21],
-        [8],
-        [7],
-        [12],
-        [3]
+        [11*factor],
+        [21*factor],
+        [8*factor],
+        [7*factor],
+        [12*factor],
+        [3*factor]
     ]
 }, emotion_opts).on('draw', emfunc);
 
 chart3 = new Chartist.Bar('#overstate-mechalynx', {
     labels: ['mechalynx-1'],
     series: [
-        [47],
-        [10],
-        [3],
-        [2]
+        [47*factor],
+        [10*factor],
+        [3*factor],
+        [2*factor]
     ]
 }, emotion_opts).on('draw', emfunc);
 
 chart3 = new Chartist.Bar('#understate-mechalynx', {
     labels: ['mechalynx-2'],
     series: [
-        [11],
-        [21],
-        [8],
-        [7],
-        [12],
-        [3]
+        [11*factor],
+        [21*factor],
+        [8*factor],
+        [7*factor],
+        [12*factor],
+        [3*factor]
     ]
 }, emotion_opts).on('draw', emfunc);
 
 chart3 = new Chartist.Bar('#overstate-antoine', {
     labels: ['antoine-1'],
     series: [
-        [3],
-        [8],
-        [21],
-        [8],
-        [8],
-        [11],
-        [3]
+        [3*factor],
+        [8*factor],
+        [21*factor],
+        [8*factor],
+        [8*factor],
+        [11*factor],
+        [3*factor]
     ]
 }, emotion_opts).on('draw', emfunc);
 
 chart3 = new Chartist.Bar('#understate-antoine', {
     labels: ['antoine-2'],
     series: [
-        [3],
-        [8],
-        [21],
-        [8],
-        [8],
-        [11],
-        [3]
+        [3*factor],
+        [8*factor],
+        [21*factor],
+        [8*factor],
+        [8*factor],
+        [11*factor],
+        [3*factor]
     ]
 }, emotion_opts).on('draw', emfunc);
 

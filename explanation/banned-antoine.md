@@ -4,7 +4,7 @@ I banned him because:
 
 That's it. I considered that part to be a risk of disruption that involved the server. I can't put up a placard warning people not to give in to his need for constant attention on this. What about the next girl that walks in?
 
-I didn't do it lightly nor was it out of spite, even though I _was_ angry at him. He needed to disconnect and couldn't let go, so that's the benefit on his side. It was enabling him to keep trying to get something unattainable instead of focusing on recovering and fixing the mess in his head.
+I didn't do it lightly nor was it out of spite, even though I _was_ angry at him. He needed to disconnect and couldn't let go, so that's the benefit on his side. Being on the server was enabling him to keep trying to get something unattainable instead of focusing on recovering and fixing the mess in his head.
 
 I wanted to invite you back as well - how could I do that without giving you some guarantee that what was frustrating in the first place would be removed? That's also why I offered to stay silent if you came back.
 
