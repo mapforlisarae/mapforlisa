@@ -6,13 +6,13 @@ _Take your time._
 
 This site has answers to questions in a format that I hope is easier for you to handle. It also has the full chat log from Discord (no PMs) commented with explanations of what, in retrospect, was actually happening and with how I interpreted things at the time.
 
-There's also the chat logs from Steve's streams, for as long as I was around. The earliest is from September 25th. Those are similarly commented and highlighted but not much.
+There's also the chat logs from Steve's streams, since the day I had written the chat logger. The earliest is from September 25th. Those are similarly commented and highlighted but not nearly as much.
 
 You can directly skip to the days you're interested in and there's highlight bookmarks so you don't have to read the entire thing.
 
 The site will remember the last log you were on so you can come back to it later.
 
-The chart at the top is our messages over time, including the total. The peak is around 1850 messages, in case you were wondering. The second chart is my interpretation of everyone's emotional state: the top bar is what was shown outwards and the bottom is what I think everyone was feeling inside.
+The chart at the top is our messages over time, including the total. The peak is around 1850 messages, in case you were wondering. The second chart is my interpretation of everyone's emotional state: the top bar is what was shown outwards and the bottom is what I think everyone was feeling inside. The time scale is the same as the top graph.
 
 And yes, this is some of the **worst code I've written**, in case it seems crude and buggy. It's hard to do a good job in a hurry.
 

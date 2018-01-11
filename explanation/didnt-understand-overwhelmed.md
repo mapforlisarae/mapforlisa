@@ -1,6 +1,8 @@
   We come from different worlds. My days are spent on a computer, I deal with a lot of complexity all the time and the chat is always up. You spend most of your time offline, almost all of it, doing very different things and when you get online, it's mostly on mobile.
 
-  It was as hard for me to understand you as it is for you to understand that all of this was very very easy to miss, even if you hadn't been too good at hiding it. I never _ignored_ you when you mentioned things in chat, I just didn't comprehend _your context_ because I'm unfamiliar with it. Reading it back makes it clear you were trying to explain, but you moved on from it so fast and it was confusing to me what you meant in the first place.
+  It was as hard for me to understand you as it is for you to understand that all of this was very very easy to miss, even if you hadn't been _this_ good at hiding it. I never _ignored_ you when you mentioned things in chat, I just didn't comprehend _your context_ because I'm unfamiliar with it. Reading it back makes it clear you were trying to explain, but you moved on from it so fast and it was confusing to me what you meant in the first place.
+
+  I know you don't want to be coddled but in this case you needed at least a second opinion and a helping hand.
 
   You tried too hard, nobody could tell. Your pace is different, I'm not used to it. When you left, I realised how hard it was. You _said_ so but I never realised _what_ you meant - I read those words as if coming from a different kind of person, someone who _could_ keep up.
 
