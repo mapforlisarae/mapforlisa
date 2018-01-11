@@ -8,4 +8,4 @@ I know it seemed to you like I was treating him bad, like I was trying to hurt h
 
 The reason I call some things out is that _you_, in this case, won't have to deal with them, to defuse them and also somewhat to prevent him from further embaressing himself.
 
-We were trying two different and somewhat conflicting strategies with him. We never communicated about it, so we never knew what one another was doing. We had the same goal and the way it went in the end was an _improvement_. It just so happened that you were also worn out by that point.
+We were trying two different and somewhat conflicting strategies with him. We never communicated about it, so we never knew what one another was doing. We had the same goal and the way it went in the end was an _improvement_. You were just worn out by that point.
