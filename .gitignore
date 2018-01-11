@@ -24,3 +24,9 @@ tags
 
 # ignore sublime-text files
 *.sublime-*
+
+# stylelint config
+.stylelintrc
+
+# csslint config
+.csslintrc
