@@ -137,9 +137,10 @@ $(window).on('load', function() {
         ytdate = m[1];
     }
 
-    if (bowser.android && (bowser.osversion[0] <= 6) ){
-        alert("You seem to be running on an old version of Android. If you can't see the graphs and nothing seems to work, try using your laptop. Sorry about this.");
-    }
+    // if (bowser.android && (bowser.osversion[0] <= 6) ){
+    //     alert("You seem to be running on an old version of Android. If you can't see the graphs and nothing seems to work, try using your laptop. Sorry about this.");
+    // }
+    document.getElementById('error_').textContent = "This is a graph of messages per day. The colored lines are us, the grey one is the total.";
 });
 
 // Adjust message data to fill holes
