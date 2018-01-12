@@ -23,7 +23,8 @@
   stroke: green;
 }
 
-#overstate-lisa .ct-series-a .ct-bar {
+
+#overstate-lisa .ct-series-a .ct-bar { 
   stroke: green;
 }
 
@@ -161,7 +162,7 @@
 }
 
 @media (min-width: 1281px) {
-  .ct-chart-line .ct-label.ct-horizontal.ct-end {
+  .ct-chart-line .ct-label.ct-horizontal.ct-end { 
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -235,16 +236,16 @@
 }
 
 
-.logtable td:nth-child(3),
-.logtable td:nth-child(4) {
-  word-wrap: break-word;
-}
+/* .logtable td:nth-child(3), */
+/* .logtable td:nth-child(4) { */
+/*   word-wrap: break-word; */
+/* } */
 
-.logtable td:nth-child(2) {
+/* .logtable td:nth-child(2) { */
   /* width: 1px; */
-  width: 9em;
-  white-space: nowrap;
-}
+  /* width: 9em; */
+  /* white-space: nowrap; */
+/* } */
 
 #discordlogModal .logtable td:nth-child(2) {
   width: 7em;
@@ -253,6 +254,7 @@
 #discordlogModal .modal-body, #ytlogModal .modal-body, #explanationModal .modal-body{
   height: calc(100vh - 200px);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .modal-body .fa-spinner{
@@ -274,13 +276,104 @@
   }
 }
 
+  #ytlogModal .logtable col:nth-child(1){
+    width: 66%;
+  }
+  #ytlogModal .logtable col:nth-child(2){
+    width: 34%;
+  }
+
+  /* #discordlogModal .logtable col:nth-child(1){ */
+  /*   width: 32px; */
+  /* } */
+  /* #discordlogModal .logtable col:nth-child(2){ */
+  /*   width: auto; */
+  /* } */
+  /* #discordlogModal .logtable col:nth-child(3){ */
+  /*   width: auto; */
+  /* } */
+  /* #discordlogModal .logtable col:nth-child(4){ */
+  /*   width: 34%; */
+  /* } */
+  /* #discordlogModal .logtable td{ */
+  /*   white-space:nowrap; */
+  /* } */
 @media (max-width: 992px) {
 
   .logtable tr td code:only-child {
-    width: 90vw;
+    /* width: 90vw; */
     display: block;
     font-size: 12px;
   }
+
+  #ytlogModal .logtable col:nth-child(1){
+    width: 100%;
+  }
+  #ytlogModal .logtable col:nth-child(2){
+    width: 0;
+  }
+
+  #discordlogModal .logtable col:nth-child(1){
+    width: initial;
+  }
+  #discordlogModal .logtable col:nth-child(2){
+    width: initial;
+  }
+  #discordlogModal .logtable col:nth-child(3){
+    width: 0;
+  }
+  #discordlogModal .logtable col:nth-child(4){
+    width: 0;
+  }
+}
+
+.timestamp-discord.mobile-discord{
+  vertical-align: top;
+}
+
+@media(min-width: 993px){
+
+#discordlogModal tr td:first-child{
+  width: 48px;
+  vertical-align: top;
+}
+
+#discordlogModal td td:nth-child(2){
+  vertical-align: top;
+}
+
+#discordlogModal td td:nth-child(3) p{
+  vertical-align: top;
+}
+
+.message-discord{
+  vertical-align: top;
+}
+
+.message-discord p, .comment-discord p{
+  display: inline;
+}
+
+.comment-discord p{
+  font-size: 12px;
+}
+
+.author-discord{
+  vertical-align: top;
+}
+.author-discord{
+  padding: 0;
+}
+}
+
+
+.comment-youtube.mobile-youtube{
+    /* width: 90vw; */
+    display: block;
+}
+
+.comment-youtube p{
+    margin-bottom: 0;
 }
 
 .logtable tr {
@@ -364,30 +457,197 @@
   padding: 8px;
 }
 
-.logtable tbody tr {
-  border-bottom: 1px solid #999;
-}
+/* .logtable tbody tr { */
+/*   border-bottom: 1px solid #999; */
+/* } */
 
-.logtable tbody tr td:first-child {
-  font-size: x-small;
+/* .logtable tbody tr td:first-child { */
+  /* font-size: x-small; */
   /* white-space: nowrap; */
-  padding-right: 4px;
-  width: 48px;
-}
-
-.logtable tbody tr h1,
-#logtable tbody tr h2,
-#logtable tbody tr h3,
-#logtable tbody tr h4,
-#logtable tbody tr h5,
-#logtable tbody tr h6 {
-  font-size: inherit;
-  font-weight: normal;
-}
+  /* padding-right: 4px; */
+  /* width: 48px; */
+/* } */
 
 .fa-discord{
   width: 20px;
   height: auto;
   background: url('/img/discord.svg');
   filter: invert(100%);
+}
+
+#explanationModal{
+  font-family: "Fira Sans", sans-serif;
+}
+
+/* #discordlogModal td{ */
+/*   font-family: "Open Sans", sans-serif; */
+/* } */
+
+/* #ytlogModal td{ */
+/*   font-family: "Roboto", sans-serif; */
+/* } */
+
+body{
+  font-family: "Fira Sans", sans-serif;
+}
+
+.comment-discord, .comment-youtube{
+  font-family: "Roboto Mono", monospace;
+}
+
+.message-discord, .timestamp-discord, .channel-discord, .author-discord{
+  font-family: "Open Sans", sans-serif;
+}
+
+.message-youtube, .timestamp-youtube, .channel-youtube, .author-youtube{
+  font-family: "Roboto", sans-serif;
+}
+
+.comment-discord, .comment-youtube, .message-discord, .message-youtube{
+  /* white-space: break-word; */
+}
+
+.comment-discord, .comment-youtube{
+  background-color: #7a7a7a;
+}
+
+.comment-discord.mobile-discord, .comment-youtube.mobile-youtube{
+  font-size: smaller;
+}
+
+.author-youtube, .author-discord{
+  font-weight: bold;
+  /* vertical-align: top; */
+}
+
+.author-youtube{
+  font-size: smaller;
+}
+
+.message-youtube p{
+  display: inline;
+  font-size: 12px;
+  /* vertical-align: top; */
+}
+
+.comment-youtube p{
+  display: inline;
+  font-size: 12px;
+}
+
+.timestamp-youtube, .author-youtube, .message-youtube{
+  margin-right: 8px;
+}
+
+.message-youtube{
+  word-wrap: break-word;
+}
+
+.timestap-youtube, .author-youtube{
+  white-space: nowrap;
+}
+
+.timestamp-discord.mobile-discord, .timestamp-youtube.mobile-youtube{
+  padding-top: 4px;
+}
+
+.timestamp-discord.mobile-youtube{
+  vertical-align: top;
+}
+
+.mobile-discord p{
+  margin: 0 !important;
+}
+
+/* .channel-discord.mobile-discord, .timestamp-discord.mobile-discord{ */
+.channel-discord, .timestamp-discord{
+  width: 20px;
+}
+
+
+.timestamp-youtube{
+  width: 48px;
+}
+
+#ytlogModal .logtable tr td:nth-child(2){
+  width: 25%;
+}
+
+/* #discordlogModal .logtable td{ */
+/*   white-space: nowrap; */
+/* } */
+
+.timestamp-discord, .channel-discord, .timestamp-youtube{
+  font-size: x-small;
+  opacity: 0.7;
+}
+
+.channel-change{
+  border-top: 1px solid #333;
+}
+
+.emphasis{
+  background-color: tan;
+}
+
+.emphasis-start{
+  border-top: 2px solid white;
+}
+
+.emphasis-end{
+  border-bottom: 2px solid white;
+}
+
+.highlight-counter{
+  display: inline;
+}
+
+/* fix long links */
+p{
+  overflow: hidden;
+}
+
+/* .modal-footer [class^='col'], .modal-footer .row{ */
+/*   margin: 0; */
+/*   padding: 0; */
+/* } */
+
+.modal-footer .row{
+  margin: 0;
+  padding: 0;
+}
+
+.modal-footer .col{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* .modal-footer .col{ */
+/*   margin-left: 16px; */
+/*   margin-right: 16px; */
+/* } */
+
+.modal-footer .container{
+  margin: 0;
+  padding: 0;
+}
+
+.modal-footer p{
+  margin: 0;
+  padding: 0;
+  font-size: small;
+  display: inline;
+}
+
+.message-discord code{
+  white-space: pre-line;
+  display: block;
+  width: 100%;
+  background-color: #332910;
+}
+
+#ytlogModal .modal-footer, #discordlogModal .modal-footer,
+#ytlogModal .modal-header, #discordlogModal .modal-header{
+  padding-top: 8px;
+  padding-bottom: 8px;
 }

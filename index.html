@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Open+Sans|Roboto|Roboto+Mono" rel="stylesheet">
+
     <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="css/style.css" />
@@ -132,6 +134,7 @@
                 <div class="modal-body">
                     <div class="loading">
                         <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                        <div class="errormessage">If you see no graphs and it's loading for more than a few seconds it's likely your browser is too old or you're using Android 6 or lower. Try Chrome for Android or your laptop. Sorry about this.</div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -150,7 +153,7 @@
                     <div class="dropdown">
                         <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <i class="fa fa-bookmark" aria-hidden="true"></i>
-    Highlights
+Highlights <p class="highlight-counter"></p>
   </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         </div>
@@ -167,17 +170,51 @@
                         <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                     </div>
                     <table class='logtable'>
+                        <colgroup>
+       <col span="1" >
+       <col span="1" >
+       <col span="1" >
+       <col span="1" >
+    </colgroup>
                         <tbody></tbody>
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-sm prevday">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <p>Comment
+                                    <p class="comment-counter"></p>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p>Day</p>
+                            </div>
+                            <div class="col align-self-end">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btn-sm prevcomm">
                         <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn btn-secondary btn-sm nextday">
+                                <button type="button" class="btn btn-secondary btn-sm nextcomm">
                         <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btn-sm prevday">
+                        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                    </button>
+                                <button type="button" class="btn btn-secondary btn-sm nextday">
+                        <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                    </button>
+                            </div>
+                            <div class="col align-self-end">
+                                <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -191,7 +228,7 @@
                     <div class="dropdown">
                         <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <i class="fa fa-bookmark" aria-hidden="true"></i>
-    Highlights
+    Highlights <p class="highlight-counter">
   </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         </div>
@@ -208,17 +245,49 @@
                         <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                     </div>
                     <table class='logtable'>
+                        <colgroup>
+       <col span="1" >
+       <col span="1" >
+    </colgroup>
                         <tbody></tbody>
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary float-left btn-sm prevday">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <p>Comment
+                                    <p class="comment-counter"></p>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p>Day</p>
+                            </div>
+                            <div class="col align-self-end">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btn-sm prevcomm">
                         <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn btn-secondary float-left btn-sm nextday">
+                                <button type="button" class="btn btn-secondary btn-sm nextcomm">
                         <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btn-sm prevday">
+                        <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                    </button>
+                                <button type="button" class="btn btn-secondary btn-sm nextday">
+                        <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                    </button>
+                            </div>
+                            <div class="col align-self-end">
+                                <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
