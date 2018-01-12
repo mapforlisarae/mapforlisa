@@ -593,7 +593,7 @@ var construct_message_youtube = function(msg, emphasis) {
     message_e.innerHTML = convert_youtube_message(msg.text);
 
     if (msg.hasOwnProperty('highlight')) {
-        message_e.id = 'highlight' + msg.highlight;
+        message_e.id = 'highlight-' + msg.highlight;
     }
 
     row_td.appendChild(message_e);
