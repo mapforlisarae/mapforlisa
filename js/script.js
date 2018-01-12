@@ -288,11 +288,11 @@ var emfunc = function(data) {
     }
 };
 
-factor = 2;
+factor = 2.5;
 chart2 = new Chartist.Bar('#overstate-lisa', {
     labels: ['lisa-1'],
     series: [
-        [40 * factor],
+        [37 * factor],
         [7 * factor],
         [12 * factor],
         [3 * factor]
@@ -314,7 +314,7 @@ chart3 = new Chartist.Bar('#understate-lisa', {
 chart3 = new Chartist.Bar('#overstate-mechalynx', {
     labels: ['mechalynx-1'],
     series: [
-        [47 * factor],
+        [44 * factor],
         [10 * factor],
         [3 * factor],
         [2 * factor]
@@ -338,7 +338,7 @@ chart3 = new Chartist.Bar('#overstate-antoine', {
     series: [
         [3 * factor],
         [8 * factor],
-        [21 * factor],
+        [18 * factor],
         [8 * factor],
         [8 * factor],
         [11 * factor],
@@ -351,7 +351,7 @@ chart3 = new Chartist.Bar('#understate-antoine', {
     series: [
         [3 * factor],
         [8 * factor],
-        [21 * factor],
+        [18 * factor],
         [8 * factor],
         [8 * factor],
         [11 * factor],
@@ -646,6 +646,10 @@ $('#explanationModal').on('hide.bs.modal', function(e) {
         'event_category': 'reading_time'
     });
     timer = 0;
+});
+
+$('#explanationModal').on('shown.bs.modal', function(event) {
+    $(this).find('.modal-body')[0].scrollTop = 0;
 });
 
 
