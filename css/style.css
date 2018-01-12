@@ -254,9 +254,11 @@
     width: auto;
   }
   #discordlogModal .logtable col:nth-child(3) {
+    display: none;
     width: 0;
   }
   #discordlogModal .logtable col:nth-child(4) {
+    display: none;
     width: 0;
   }
 }
