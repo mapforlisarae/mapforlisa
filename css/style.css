@@ -16,15 +16,14 @@
 }
 
 .ct-series-a .ct-line {
-  stroke: rgba(51,51,51,0.3);
+  stroke: rgba(51, 51, 51, 0.3);
 }
 
 .ct-series-a .ct-bar {
   stroke: green;
 }
 
-
-#overstate-lisa .ct-series-a .ct-bar { 
+#overstate-lisa .ct-series-a .ct-bar {
   stroke: green;
 }
 
@@ -39,7 +38,6 @@
 #overstate-lisa .ct-series-d .ct-bar {
   stroke: orange;
 }
-
 
 #understate-lisa .ct-series-a .ct-bar {
   stroke: green;
@@ -129,7 +127,7 @@
   stroke: red;
 }
 
-#overstate-antoine .ct-series-g .ct-bar{
+#overstate-antoine .ct-series-g .ct-bar {
   stroke: crimson;
 }
 
@@ -157,12 +155,12 @@
   stroke: red;
 }
 
-#understate-antoine .ct-series-g .ct-bar{
+#understate-antoine .ct-series-g .ct-bar {
   stroke: crimson;
 }
 
 @media (min-width: 1281px) {
-  .ct-chart-line .ct-label.ct-horizontal.ct-end { 
+  .ct-chart-line .ct-label.ct-horizontal.ct-end {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -176,49 +174,10 @@
   }
 }
 
-
-/* #emotional-state-over-time-graph{ */
-
-
-/*   overflow: hidden; */
-
-
-/* } */
-
 .state-bar {
   height: 24px;
   display: block;
 }
-
-
-/* .avatar-container{ */
-
-
-/*   float: left; */
-
-
-/*   height: 100%; */
-
-
-/*   display: block; */
-
-
-/*   position: absolute; */
-
-
-/* } */
-
-
-/*  */
-
-
-/* .avatar-subcontainer{ */
-
-
-/*   position: relative; */
-
-
-/* } */
 
 .avatar {
   display: block;
@@ -235,34 +194,24 @@
   margin-left: 8px;
 }
 
-
-/* .logtable td:nth-child(3), */
-/* .logtable td:nth-child(4) { */
-/*   word-wrap: break-word; */
+/* #discordlogModal .logtable td:nth-child(2) { */
+/*   width: 7em; */
 /* } */
 
-/* .logtable td:nth-child(2) { */
-  /* width: 1px; */
-  /* width: 9em; */
-  /* white-space: nowrap; */
-/* } */
-
-#discordlogModal .logtable td:nth-child(2) {
-  width: 7em;
-}
-
-#discordlogModal .modal-body, #ytlogModal .modal-body, #explanationModal .modal-body{
+#discordlogModal .modal-body,
+#ytlogModal .modal-body,
+#explanationModal .modal-body {
   height: calc(100vh - 200px);
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-.modal-body .fa-spinner{
+.modal-body .fa-spinner {
   top: 30%;
   position: relative;
 }
 
-.modal-body .loading{
+.modal-body .loading {
   width: 100%;
   overflow: hidden;
   text-align: center;
@@ -270,110 +219,94 @@
   font-size: 5vw;
 }
 
-@media(max-width: 992px){
-  .modal-body .loading{
+@media(max-width: 992px) {
+  .modal-body .loading {
     font-size: 7vw;
   }
 }
 
-  #ytlogModal .logtable col:nth-child(1){
-    width: 66%;
-  }
-  #ytlogModal .logtable col:nth-child(2){
-    width: 34%;
-  }
+#ytlogModal .logtable col:nth-child(1) {
+  width: 66%;
+}
 
-  /* #discordlogModal .logtable col:nth-child(1){ */
-  /*   width: 32px; */
-  /* } */
-  /* #discordlogModal .logtable col:nth-child(2){ */
-  /*   width: auto; */
-  /* } */
-  /* #discordlogModal .logtable col:nth-child(3){ */
-  /*   width: auto; */
-  /* } */
-  /* #discordlogModal .logtable col:nth-child(4){ */
-  /*   width: 34%; */
-  /* } */
-  /* #discordlogModal .logtable td{ */
-  /*   white-space:nowrap; */
-  /* } */
+#ytlogModal .logtable col:nth-child(2) {
+  width: 34%;
+}
+
 @media (max-width: 992px) {
 
   .logtable tr td code:only-child {
-    /* width: 90vw; */
     display: block;
     font-size: 12px;
   }
 
-  #ytlogModal .logtable col:nth-child(1){
+  #ytlogModal .logtable col:nth-child(1) {
     width: 100%;
   }
-  #ytlogModal .logtable col:nth-child(2){
+  #ytlogModal .logtable col:nth-child(2) {
     width: 0;
   }
 
-  #discordlogModal .logtable col:nth-child(1){
-    width: initial;
+  #discordlogModal .logtable col:nth-child(1) {
+    width: 48px;
   }
-  #discordlogModal .logtable col:nth-child(2){
-    width: initial;
+  #discordlogModal .logtable col:nth-child(2) {
+    width: auto;
   }
-  #discordlogModal .logtable col:nth-child(3){
+  #discordlogModal .logtable col:nth-child(3) {
     width: 0;
   }
-  #discordlogModal .logtable col:nth-child(4){
+  #discordlogModal .logtable col:nth-child(4) {
     width: 0;
   }
 }
 
-.timestamp-discord.mobile-discord{
+.timestamp-discord.mobile-discord {
   vertical-align: top;
 }
 
-@media(min-width: 993px){
+@media(min-width: 993px) {
 
-#discordlogModal tr td:first-child{
-  width: 48px;
-  vertical-align: top;
+  #discordlogModal tr td:first-child {
+    width: 48px;
+    vertical-align: top;
+  }
+
+  #discordlogModal td td:nth-child(2) {
+    vertical-align: top;
+  }
+
+  #discordlogModal td td:nth-child(3) p {
+    vertical-align: top;
+  }
+
+  .message-discord {
+    vertical-align: top;
+  }
+
+  .message-discord p,
+  .comment-discord p {
+    display: inline;
+  }
+
+  .comment-discord p {
+    font-size: 12px;
+  }
+
+  .author-discord {
+    vertical-align: top;
+  }
+  .author-discord {
+    padding: 0;
+  }
 }
 
-#discordlogModal td td:nth-child(2){
-  vertical-align: top;
+.comment-youtube.mobile-youtube {
+  display: block;
 }
 
-#discordlogModal td td:nth-child(3) p{
-  vertical-align: top;
-}
-
-.message-discord{
-  vertical-align: top;
-}
-
-.message-discord p, .comment-discord p{
-  display: inline;
-}
-
-.comment-discord p{
-  font-size: 12px;
-}
-
-.author-discord{
-  vertical-align: top;
-}
-.author-discord{
-  padding: 0;
-}
-}
-
-
-.comment-youtube.mobile-youtube{
-    /* width: 90vw; */
-    display: block;
-}
-
-.comment-youtube p{
-    margin-bottom: 0;
+.comment-youtube p {
+  margin-bottom: 0;
 }
 
 .logtable tr {
@@ -457,197 +390,179 @@
   padding: 8px;
 }
 
-/* .logtable tbody tr { */
-/*   border-bottom: 1px solid #999; */
-/* } */
 
-/* .logtable tbody tr td:first-child { */
-  /* font-size: x-small; */
-  /* white-space: nowrap; */
-  /* padding-right: 4px; */
-  /* width: 48px; */
-/* } */
-
-.fa-discord{
+.fa-discord {
   width: 20px;
   height: auto;
   background: url('/img/discord.svg');
   filter: invert(100%);
 }
 
-#explanationModal{
+#explanationModal {
   font-family: "Fira Sans", sans-serif;
 }
 
-/* #discordlogModal td{ */
-/*   font-family: "Open Sans", sans-serif; */
-/* } */
-
-/* #ytlogModal td{ */
-/*   font-family: "Roboto", sans-serif; */
-/* } */
-
-body{
+body {
   font-family: "Fira Sans", sans-serif;
 }
 
-.comment-discord, .comment-youtube{
+.comment-discord,
+.comment-youtube {
   font-family: "Roboto Mono", monospace;
 }
 
-.message-discord, .timestamp-discord, .channel-discord, .author-discord{
+.message-discord,
+.timestamp-discord,
+.channel-discord,
+.author-discord {
   font-family: "Open Sans", sans-serif;
 }
 
-.message-youtube, .timestamp-youtube, .channel-youtube, .author-youtube{
+.message-youtube,
+.timestamp-youtube,
+.channel-youtube,
+.author-youtube {
   font-family: "Roboto", sans-serif;
 }
 
-.comment-discord, .comment-youtube, .message-discord, .message-youtube{
-  /* white-space: break-word; */
-}
-
-.comment-discord, .comment-youtube{
+.comment-discord,
+.comment-youtube {
   background-color: #7a7a7a;
 }
 
-.comment-discord.mobile-discord, .comment-youtube.mobile-youtube{
+.comment-discord.mobile-discord,
+.comment-youtube.mobile-youtube {
   font-size: smaller;
 }
 
-.author-youtube, .author-discord{
+.author-youtube,
+.author-discord {
   font-weight: bold;
-  /* vertical-align: top; */
 }
 
-.author-youtube{
+.author-youtube {
   font-size: smaller;
 }
 
-.message-youtube p{
-  display: inline;
-  font-size: 12px;
-  /* vertical-align: top; */
-}
-
-.comment-youtube p{
+.message-youtube p {
   display: inline;
   font-size: 12px;
 }
 
-.timestamp-youtube, .author-youtube, .message-youtube{
+.comment-youtube p {
+  display: inline;
+  font-size: 12px;
+}
+
+.timestamp-youtube,
+.author-youtube,
+.message-youtube {
   margin-right: 8px;
 }
 
-.message-youtube{
+.message-youtube {
   word-wrap: break-word;
 }
 
-.timestap-youtube, .author-youtube{
+.timestap-youtube,
+.author-youtube {
   white-space: nowrap;
 }
 
-.timestamp-discord.mobile-discord, .timestamp-youtube.mobile-youtube{
+.timestamp-discord.mobile-discord,
+.timestamp-youtube.mobile-youtube {
   padding-top: 4px;
 }
 
-.timestamp-discord.mobile-youtube{
+.timestamp-discord.mobile-youtube {
   vertical-align: top;
 }
 
-.mobile-discord p{
+.mobile-discord p {
   margin: 0 !important;
 }
 
-/* .channel-discord.mobile-discord, .timestamp-discord.mobile-discord{ */
-.channel-discord, .timestamp-discord{
+.channel-discord,
+.timestamp-discord {
   width: 20px;
 }
 
 
-.timestamp-youtube{
+.timestamp-youtube {
   width: 48px;
 }
 
-#ytlogModal .logtable tr td:nth-child(2){
+#ytlogModal .logtable tr td:nth-child(2) {
   width: 25%;
 }
 
-/* #discordlogModal .logtable td{ */
-/*   white-space: nowrap; */
-/* } */
-
-.timestamp-discord, .channel-discord, .timestamp-youtube{
+.timestamp-discord,
+.channel-discord,
+.timestamp-youtube {
   font-size: x-small;
   opacity: 0.7;
 }
 
-.channel-change{
+.channel-change {
   border-top: 1px solid #333;
 }
 
-.emphasis{
+.emphasis {
   background-color: tan;
 }
 
-.emphasis-start{
+.emphasis-start {
   border-top: 2px solid white;
 }
 
-.emphasis-end{
+.emphasis-end {
   border-bottom: 2px solid white;
 }
 
-.highlight-counter{
+.highlight-counter {
   display: inline;
 }
 
+
 /* fix long links */
-p{
+
+p {
   overflow: hidden;
 }
 
-/* .modal-footer [class^='col'], .modal-footer .row{ */
-/*   margin: 0; */
-/*   padding: 0; */
-/* } */
-
-.modal-footer .row{
+.modal-footer .row {
   margin: 0;
   padding: 0;
 }
 
-.modal-footer .col{
+.modal-footer .col {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* .modal-footer .col{ */
-/*   margin-left: 16px; */
-/*   margin-right: 16px; */
-/* } */
-
-.modal-footer .container{
+.modal-footer .container {
   margin: 0;
   padding: 0;
 }
 
-.modal-footer p{
+.modal-footer p {
   margin: 0;
   padding: 0;
   font-size: small;
   display: inline;
 }
 
-.message-discord code{
+.message-discord code {
   white-space: pre-line;
   display: block;
   width: 100%;
   background-color: #332910;
 }
 
-#ytlogModal .modal-footer, #discordlogModal .modal-footer,
-#ytlogModal .modal-header, #discordlogModal .modal-header{
+#ytlogModal .modal-footer,
+#discordlogModal .modal-footer,
+#ytlogModal .modal-header,
+#discordlogModal .modal-header {
   padding-top: 8px;
   padding-bottom: 8px;
 }
