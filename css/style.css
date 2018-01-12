@@ -248,7 +248,7 @@
     width: 48px;
   }
   #discordlogModal .logtable col:nth-child(2) {
-    width: auto;
+    width: 100%;
   }
   #discordlogModal .logtable col:nth-child(3) {
     display: none;
