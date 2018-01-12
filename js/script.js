@@ -753,7 +753,15 @@ $('#discordlogModal').on('show.bs.modal', function(event) {
     tbl = document.querySelector('#discordlogModal .logtable tbody');
     tbl.innerHTML = "";
     tbl.style = "display: none";
-    $.ajax('/log/' + 'discord' + '/' + d + '.json', {
+    modal.find('#discordlogModal .logtable').find('colgroup').empty();
+            if ($(window).width() > 992) {
+                for (j=0; j< 4; j++){
+                l = document.createElement('col');
+                l.setAttribute('span', 1);
+                modal.find('#discordlogModal .logtable').find('colgroup').prepend(l);
+                }
+            }
+        $.ajax('/log/' + 'discord' + '/' + d + '.json', {
         dataType: 'text',
         type: 'GET'
     }).done(function(text) {
