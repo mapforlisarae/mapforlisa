@@ -19,3 +19,5 @@ I don't know how to express myself so after thinking about it non-stop for a few
 When you rejected that the world came crashing down on me. I realised what I had been pushing away for so long, that I was lonely. Steve's chat's and Discord had remedied that enough to make losing them terrifying. I'm pretty sure this is where the motivation for me to start the server came from. I've done nothing but think about this.
 
 If it seems too much progress for a short time, consider that a lot of this was already in my head somewhere all along. When you left, both times, it was an impact that eliminated a lot of possibilities and cleared things up for me. It's still been incredibly difficult.
+
+It has caused a sort of identity crisis for me. I've had to modify the way I think and how I look at everything. The world seems a stranger and more _purple_, kind of a queazy place. I'll get used to this in time, but you should know it was a significant experience for me. All of this was somewhere inside me but it took a lot of guilt, thought and panic to get it out.
