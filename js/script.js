@@ -549,7 +549,7 @@ var construct_message_youtube_mobile = function(msg, emphasis) {
     }
     returnlist.unshift(message_row);
 
-    if (msg.hasOwnProperty('comment') && typeof msg.comment !== 'undefined') {
+    if (msg.hasOwnProperty('comment') && typeof msg.comment !== 'undefined' && msg.comment !== "") {
         var comment_row = document.createElement('tr');
         var comment_td = document.createElement('td');
 
@@ -957,9 +957,10 @@ $('#ytlogModal').on('show.bs.modal', function(event) {
 var comments_y = 0;
 var highlights_y = 0;
         modal.find('.dropdown-toggle').prop('disabled', true);
+        var still_highlighting = false;
         for (i = 0; i < chatlog.length; i++) {
-            if (chatlog[i].length > 4) {
-                modal.find('.dropdown-menu').append("<a class=\"dropdown-item\" href=\"#highlight-" + chatlog[i][4] + "\">" + chatlog[i][4] + "</a>");
+            if (typeof chatlog[i][4] !== 'undefined' && chatlog[i][4] !== "") {
+                modal.find('.dropdown-menu').append("<a class=\"dropdown-item\" href=\"#highlight-" + chatlog[i][4] + "\">" + (typeof chatlog[i][5] !== 'undefined' && chatlog[i][5] !== "" ? chatlog[i][5] : chatlog[i][4]) + "</a>");
                 highlights_y++;
             }
             var r = null;
@@ -975,10 +976,25 @@ var highlights_y = 0;
                 comment_count: comments_y
             };
             // console.log(o);
+            var emphasis_flag_yt = false;
+            if (still_highlighting){
+                emphasis_flag_yt = true;
+            }
+            if (typeof chatlog[i][6] !== 'undefined'){
+                if (chatlog[i][6] == 'highlight'){
+                    emphasis_flag_yt = true;
+                } else if (chatlog[i][6] == 'highlight-start'){
+                    emphasis_flag_yt = true;
+                    still_highlighting = true;
+                } else if (chatlog[i][6] == 'highlight-end'){
+                    emphasis_flag_yt = true;
+                    still_highlighting = false;
+                }
+            }
             if ($(window).width() < 992) {
-                r = construct_message_youtube_mobile(o, false);
+                r = construct_message_youtube_mobile(o, emphasis_flag_yt);
             } else {
-                r = construct_message_youtube(o, false);
+                r = construct_message_youtube(o, emphasis_flag_yt);
             }
             while (r.length) {
                 tbl.appendChild(r.pop());

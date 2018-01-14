@@ -1,4 +1,4 @@
-**I hope you take this as what it is: a sincere effort to understand you, understand what happened and demonstrate it so that you can understand as well. I know you don't want to be coddled so I've been direct in my comments and writing here.**
+**I hope you take this as what it is: a sincere effort to understand you, understand what happened and demonstrate it so that you can understand as well. I know you don't want to be coddled so I've been direct in my comments and writing here. This is _not_ an attempt to get you back to Discord or court you.**
 
 I don't know the way to approach you with this. You've already showed a lot of patience but I need to ask you for a bit more as you read this. It's not a waste of time but I'm not good at expressing myself.
 
