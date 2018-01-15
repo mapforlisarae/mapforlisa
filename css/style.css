@@ -568,3 +568,20 @@ p {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+
+.logtable .highlight-start{
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.logtable .highlight-mid{
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.logtable .highlight-end{
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}

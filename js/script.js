@@ -36,7 +36,6 @@ var ytdisableddates = [
     '2017-09-24',
     '2017-09-26',
     '2017-09-28',
-    '2017-09-29',
     '2017-09-30',
     '2017-10-01',
     '2017-10-03',
@@ -506,7 +505,7 @@ var construct_message_discord = function(msg, channel_change, emphasis) {
     return [row];
 };
 
-var construct_message_youtube_mobile = function(msg, emphasis) {
+var construct_message_youtube_mobile = function(msg, emphasis, highlight_stage) {
     // console.log(msg);
     emphasis = typeof emphasis !== 'undefined' ? emphasis : false;
 
@@ -546,6 +545,13 @@ var construct_message_youtube_mobile = function(msg, emphasis) {
     message_row.appendChild(message_td);
     if (emphasis) {
         message_row.classList.add('emphasis');
+    }
+    if (highlight_stage == 1){
+        message_row.classList.add('highlight-start');
+    } else if (highlight_stage == -1 ){
+        message_row.classList.add('highlight-end');
+    } else if (highlight_stage > 1){
+        message_row.classList.add('highlight-mid');
     }
     returnlist.unshift(message_row);
 
@@ -957,7 +963,7 @@ $('#ytlogModal').on('show.bs.modal', function(event) {
 var comments_y = 0;
 var highlights_y = 0;
         modal.find('.dropdown-toggle').prop('disabled', true);
-        var still_highlighting = false;
+        var still_highlighting = 0;
         for (i = 0; i < chatlog.length; i++) {
             if (typeof chatlog[i][4] !== 'undefined' && chatlog[i][4] !== "") {
                 modal.find('.dropdown-menu').append("<a class=\"dropdown-item\" href=\"#highlight-" + chatlog[i][4] + "\">" + (typeof chatlog[i][5] !== 'undefined' && chatlog[i][5] !== "" ? chatlog[i][5] : chatlog[i][4]) + "</a>");
@@ -977,24 +983,32 @@ var highlights_y = 0;
             };
             // console.log(o);
             var emphasis_flag_yt = false;
-            if (still_highlighting){
-                emphasis_flag_yt = true;
+            // if (still_highlighting){
+            //     emphasis_flag_yt = true;
+            // }
+            if(still_highlighting){
+                still_highlighting++;
+            } else if (still_highlighting == -1){
+                still_highlighting = 0;
             }
-            if (typeof chatlog[i][6] !== 'undefined'){
+            if (typeof chatlog[i][6] !== 'undefined' && chatlog[i][6] !== ""){
                 if (chatlog[i][6] == 'highlight'){
                     emphasis_flag_yt = true;
-                } else if (chatlog[i][6] == 'highlight-start'){
-                    emphasis_flag_yt = true;
-                    still_highlighting = true;
-                } else if (chatlog[i][6] == 'highlight-end'){
-                    emphasis_flag_yt = true;
-                    still_highlighting = false;
+                }
+            }
+            if (typeof chatlog[i][7] !== 'undefined' && chatlog[i][7] !== ""){
+                if (chatlog[i][7] == 'highlight-start'){
+                    // emphasis_flag_yt = true;
+                    still_highlighting = 1;
+                } else if (chatlog[i][7] == 'highlight-end'){
+                    // emphasis_flag_yt = true;
+                    still_highlighting = -1;
                 }
             }
             if ($(window).width() < 992) {
-                r = construct_message_youtube_mobile(o, emphasis_flag_yt);
+                r = construct_message_youtube_mobile(o, emphasis_flag_yt, still_highlighting);
             } else {
-                r = construct_message_youtube(o, emphasis_flag_yt);
+                r = construct_message_youtube(o, emphasis_flag_yt, still_highlighting);
             }
             while (r.length) {
                 tbl.appendChild(r.pop());
