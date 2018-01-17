@@ -63,8 +63,8 @@ var ytdisableddates = [
     '2017-11-02',
 ];
 
-var showdown_message_filter_regexp_discord = /(\\|\{|\}|\[|\]|\(|\)|\#|\+|\-|\.|\!)/g;
-var showdown_message_filter_regexp_youtube = /(\`|\\|\{|\}|\[|\]|\(|\)|\#|\+|\-|\.|\!)/g;
+var showdown_message_filter_regexp_discord = /(\>|\\|\{|\}|\[|\]|\(|\)|\#|\+|\-|\.|\!)/g;
+var showdown_message_filter_regexp_youtube = /(\>|\`|\\|\{|\}|\[|\]|\(|\)|\#|\+|\-|\.|\!)/g;
 var showdown_message_filter_escape = '\\$1';
 
 var showdown_message_options_discord = {
